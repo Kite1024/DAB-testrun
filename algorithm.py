@@ -7,7 +7,7 @@ def step(state: GameState):
     :param state: contains the state of the game. See readme.md for the available functions.
     :return: the direction in which the pawn has to move.
     """
-    return simplestep(state)
+    return doublestep(state)
 
 def simplestep(state: GameState):
     """
