@@ -42,19 +42,19 @@ def doublestep(state: GameState):
     Simple algorithm
     """
     # If the cell below is free, go south
-    if state.cell_safe(state.pawn_row() + 1, state.pawn_column()).is_empty() && state.cell_safe(state.pawn_row() + 2, state.pawn_column()).is_empty():
+    if state.cell_safe(state.pawn_row() + 1, state.pawn_column()).is_empty() and state.cell_safe(state.pawn_row() + 2, state.pawn_column()).is_empty():
         return Direction.SOUTH
 
     # If the cell to the right is free, go east
-    if state.cell_safe(state.pawn_row(), state.pawn_column() + 1).is_empty() && state.cell_safe(state.pawn_row(), state.pawn_column() + 2).is_empty():
+    if state.cell_safe(state.pawn_row(), state.pawn_column() + 1).is_empty() and state.cell_safe(state.pawn_row(), state.pawn_column() + 2).is_empty():
         return Direction.EAST
 
     # If the cell above is free, go north
-    if state.cell_safe(state.pawn_row() - 1, state.pawn_column()).is_empty() && state.cell_safe(state.pawn_row() - 2, state.pawn_column()).is_empty():
+    if state.cell_safe(state.pawn_row() - 1, state.pawn_column()).is_empty() and state.cell_safe(state.pawn_row() - 2, state.pawn_column()).is_empty():
         return Direction.NORTH
 
     # If the cell ot the left is free, go west
-    if state.cell_safe(state.pawn_row(), state.pawn_column() - 1).is_empty() && state.cell_safe(state.pawn_row(), state.pawn_column() - 2).is_empty():
+    if state.cell_safe(state.pawn_row(), state.pawn_column() - 1).is_empty() and state.cell_safe(state.pawn_row(), state.pawn_column() - 2).is_empty():
         return Direction.WEST
 
     # Any normal print output is shown in the gameconsole.
