@@ -1,0 +1,8 @@
+# Ignore project files from IntelliJ / Pycharm
+*.iml
+.idea
+
+# Ignore python things
+__pycache__/
+.pytest_cache
+.coverage
