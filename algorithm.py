@@ -7,7 +7,7 @@ def step(state: GameState):
     :param state: contains the state of the game. See readme.md for the available functions.
     :return: the direction in which the pawn has to move.
     """
-    simplestep(state)
+    return simplestep(state)
 
 def simplestep(state: GameState):
     """
@@ -26,12 +26,18 @@ def simplestep(state: GameState):
         return Direction.NORTH
 
     # If the cell ot the left is free, go west
-    if state.cell_safe(state.pawn_row(), state.pawn_column() + 1).is_empty():
+    if state.cell_safe(state.pawn_row(), state.pawn_column() - 1).is_empty():
         return Direction.WEST
 
     # Any normal print output is shown in the gameconsole.
     print("Oh no! Nowhere to go")
 
     # If nothing is returned, the pawn will move in the same direction as the previous step
+
+def checkingstep(state: GameState):
+    """
+    Checks for non-wall entities
+    """
+
 
 run_algorithm(step)
